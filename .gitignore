@@ -1,0 +1,7 @@
+.vercel
+node_modules
+lib
+.bsb.lock
+.merlin
+
+api/*.js

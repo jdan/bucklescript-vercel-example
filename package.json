@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "bs-platform": "^7.3.2",
+    "concurrently": "^5.2.0"
+  },
+  "scripts": {
+    "watch": "concurrently \"bsb -clean-world -make-world -w\" \"vercel dev\""
+  }
+}

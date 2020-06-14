@@ -1,0 +1,9 @@
+{
+  "name": "bucklescript-vercel-example",
+  "sources": ["api"],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js"
+}
