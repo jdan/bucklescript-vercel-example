@@ -1,6 +1,6 @@
 {
   "name": "bucklescript-vercel-example",
-  "sources": ["api"],
+  "sources": ["api", "util"],
   "package-specs": {
     "module": "commonjs",
     "in-source": true
