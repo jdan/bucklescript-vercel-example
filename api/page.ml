@@ -1,5 +1,13 @@
-let layout ?(title="Page") contents =
-  Printf.sprintf "
+let layout ?(title="Page") ?(livereload=false) contents =
+  let livereload_script =
+    if livereload
+    then
+      "<script>
+        fetch('//localhost:45678/wait')
+          .then(() => window.location.reload())
+      </script>"
+    else ""
+  in Printf.sprintf "
     <html>
       <head>
         <title>%s</title>
@@ -8,9 +16,9 @@ let layout ?(title="Page") contents =
           body { margin: 0; padding: 0; }
         </style>
       </head>
-      <body>%s</body>
+      <body>%s %s</body>
     </html>
-  " title contents
+  " title contents livereload_script
 
 let center contents =
   Printf.sprintf
@@ -55,10 +63,3 @@ let p contents =
 
 let button contents =
   Printf.sprintf "<button>%s</button>" contents
-
-let with_live_reload contents =
-  contents ^
-  "<script>
-    fetch('//localhost:45678/wait')
-      .then(() => window.location.reload())
-  </script>"
