@@ -9,5 +9,6 @@ let default _ res =
     )
   )
   |> center
+  |> with_live_reload
   |> layout ~title:"bucklescript + vercel"
   |> Server.send res

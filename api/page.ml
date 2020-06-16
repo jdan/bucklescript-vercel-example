@@ -55,3 +55,10 @@ let p contents =
 
 let button contents =
   Printf.sprintf "<button>%s</button>" contents
+
+let with_live_reload contents =
+  contents ^
+  "<script>
+    fetch('//localhost:45678/wait')
+      .then(() => window.location.reload())
+  </script>"

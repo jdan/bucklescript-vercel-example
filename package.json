@@ -4,6 +4,6 @@
     "concurrently": "^5.2.0"
   },
   "scripts": {
-    "watch": "concurrently \"bsb -clean-world -make-world -w\" \"vercel dev\""
+    "watch": "concurrently \"node livereload/server.js\" \"bsb -clean-world -make-world -w\" \"vercel dev\""
   }
 }
