@@ -5,3 +5,4 @@ lib
 .merlin
 
 api/*.js
+util/*.js
